@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitPlanner | Treinos e Dietas Personalizadas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">Plano inteligente para emagrecimento</p>
+          <h1>Monte treinos e dietas personalizadas em poucos segundos.</h1>
+          <p class="hero-copy">
+            Informe objetivo, peso, altura e rotina para receber um plano inicial com
+            calorias estimadas, divisão de macronutrientes, sugestão de refeições e
+            cronograma semanal de treinos.
+          </p>
+          <div class="hero-badges">
+            <span>IMC automático</span>
+            <span>Macros diários</span>
+            <span>Treino semanal</span>
+          </div>
+        </div>
+        <div class="stats-panel">
+          <div class="stat-card">
+            <strong>+ foco</strong>
+            <span>Planos orientados pelo objetivo do usuário.</span>
+          </div>
+          <div class="stat-card">
+            <strong>+ aderência</strong>
+            <span>Dicas de rotina para criar consistência.</span>
+          </div>
+          <div class="stat-card accent">
+            <strong>1 app</strong>
+            <span>Treino, alimentação e metas no mesmo lugar.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <form id="planner-form" class="card form-card">
+          <div class="section-heading">
+            <p class="eyebrow">Dados do usuário</p>
+            <h2>Personalize o plano</h2>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              Nome
+              <input type="text" id="name" placeholder="Ex.: Marina" required />
+            </label>
+            <label>
+              Objetivo
+              <select id="goal" required>
+                <option value="emagrecer">Emagrecer</option>
+                <option value="definir">Definição muscular</option>
+                <option value="reeducacao">Reeducação alimentar</option>
+              </select>
+            </label>
+            <label>
+              Peso atual (kg)
+              <input type="number" id="weight" min="30" max="300" step="0.1" required />
+            </label>
+            <label>
+              Altura (cm)
+              <input type="number" id="height" min="120" max="230" step="1" required />
+            </label>
+            <label>
+              Idade
+              <input type="number" id="age" min="14" max="90" step="1" required />
+            </label>
+            <label>
+              Sexo
+              <select id="sex" required>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+              </select>
+            </label>
+            <label>
+              Nível de atividade
+              <select id="activity" required>
+                <option value="sedentario">Sedentário</option>
+                <option value="leve">Levemente ativo</option>
+                <option value="moderado">Moderadamente ativo</option>
+                <option value="alto">Muito ativo</option>
+              </select>
+            </label>
+            <label>
+              Dias disponíveis para treinar
+              <input type="number" id="days" min="2" max="7" step="1" required />
+            </label>
+          </div>
+
+          <label>
+            Restrições ou preferências alimentares
+            <textarea
+              id="diet"
+              rows="3"
+              placeholder="Ex.: vegetariana, intolerância à lactose, sem frutos do mar"
+            ></textarea>
+          </label>
+
+          <button type="submit" class="primary-button">Gerar plano personalizado</button>
+        </form>
+
+        <section class="card output-card" id="results">
+          <div class="section-heading">
+            <p class="eyebrow">Resultado</p>
+            <h2>Seu plano aparecerá aqui</h2>
+          </div>
+          <p class="empty-state">
+            Preencha o formulário para visualizar estimativas, metas calóricas, refeições e
+            rotina de treinos.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
